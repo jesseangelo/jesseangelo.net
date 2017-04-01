@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent }  from './app.component';
 import { MenuComponent }  from './menu.component';
+import { ContentComponent }  from './content.component';
+import { PageTitleComponent }  from './pageTitle.component';
 
 @NgModule({
   imports:      [ BrowserModule ],
-  declarations: [ AppComponent, MenuComponent ],
+  /* components, directives, and pipes here */
+  declarations: [ AppComponent, MenuComponent, ContentComponent, PageTitleComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

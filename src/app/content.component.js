@@ -6,16 +6,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var MenuComponent = (function () {
-    function MenuComponent() {
+var ContentComponent = (function () {
+    function ContentComponent() {
+        this.title = 'Work';
     }
-    return MenuComponent;
+    return ContentComponent;
 }());
-MenuComponent = __decorate([
+ContentComponent = __decorate([
     core_1.Component({
-        selector: 'main-menu',
-        template: "<img src='Jesse_logo_80x.png'>\n    ",
+        selector: 'content',
+        template: "<page-title></page-title>\n  This is content",
     })
-], MenuComponent);
-exports.MenuComponent = MenuComponent;
-//# sourceMappingURL=menu.component.js.map
+], ContentComponent);
+exports.ContentComponent = ContentComponent;
+//# sourceMappingURL=content.component.js.map

@@ -6,16 +6,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+var section_1 = require("./section");
 var AppComponent = (function () {
     function AppComponent() {
-        this.name = 'Jesse';
+        this.sections = [
+            new section_1.Section(0, 'Home'),
+            new section_1.Section(1, 'Work'),
+            new section_1.Section(2, 'Skills'),
+            new section_1.Section(3, 'Experience'),
+            new section_1.Section(4, 'About')
+        ];
+        this.mySection = this.sections[0];
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<main-menu>",
+        template: "\n  <main-menu> </main-menu>\n  <content> </content>\n  Current section {{mySection.name}}\n  ",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
