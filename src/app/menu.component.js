@@ -27,7 +27,7 @@ __decorate([
 MenuComponent = __decorate([
     core_1.Component({
         selector: 'main-menu',
-        template: "\n    <a (click)=\"toggleMenu()\">\n      <img src='Jesse_logo_80x.png'>\n    </a>\n\n    <ul>\n      <li *ngFor=\"let section of sections\">\n        <a (click)=\"selectSection(section.id)\" >{{ section.name }}</a>\n      </li>\n    </ul>\n\n  ",
+        template: "\n    <a (click)=\"toggleMenu()\">\n      <img src='Jesse_logo_80x.png'>\n    </a>\n    <!--\n    <ul>\n      <li *ngFor=\"let section of sections\">\n        <a (click)=\"selectSection(section.id)\" >{{ section.name }}</a>\n      </li>\n    </ul>-->\n  \n\n  ",
     })
 ], MenuComponent);
 exports.MenuComponent = MenuComponent;

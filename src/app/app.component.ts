@@ -6,8 +6,15 @@ import { Section } from './section'
   template: `
   <main-menu [sections]=sections> </main-menu>
   Current section {{mySection.name}}
-  <br>
+
   <content [section]=mySection> </content>
+
+  <nav>
+    <a routerLink="/work" routerLinkActive="active">Work</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </nav>
+
+  <router-outlet></router-outlet>
   `,
 })
 export class AppComponent  {
