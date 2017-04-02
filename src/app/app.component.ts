@@ -4,7 +4,7 @@ import { Section } from './section'
 @Component({
   selector: 'my-app',
   template: `
-  <main-menu> </main-menu>
+  <main-menu [sections]=sections> </main-menu>
   Current section {{mySection.name}}
   <br>
   <content [section]=mySection> </content>

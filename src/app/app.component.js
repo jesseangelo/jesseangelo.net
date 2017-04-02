@@ -23,7 +23,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n  <main-menu> </main-menu>\n  Current section {{mySection.name}}\n  <br>\n  <content [section]=mySection> </content>\n  ",
+        template: "\n  <main-menu [sections]=sections> </main-menu>\n  Current section {{mySection.name}}\n  <br>\n  <content [section]=mySection> </content>\n  ",
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
