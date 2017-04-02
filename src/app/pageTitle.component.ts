@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'page-title',
-  template: `<span>{{title}} This is a title</span>`,
+  template: `<h1>{{section.name}}</h1>`,
 })
-export class PageTitleComponent  { title = "Work" }
+export class PageTitleComponent  {
+  @Input() section: Section
+}

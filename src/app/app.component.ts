@@ -5,8 +5,9 @@ import { Section } from './section'
   selector: 'my-app',
   template: `
   <main-menu> </main-menu>
-  <content> </content>
   Current section {{mySection.name}}
+  <br>
+  <content [section]=mySection> </content>
   `,
 })
 export class AppComponent  {
@@ -19,4 +20,5 @@ export class AppComponent  {
   ];
 
   mySection = this.sections[0];
+
 }
