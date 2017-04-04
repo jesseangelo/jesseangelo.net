@@ -11,12 +11,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var MenuComponent = (function () {
     function MenuComponent() {
+        this.showMenu = true;
     }
     MenuComponent.prototype.toggleMenu = function () {
-        console.log('clicked');
-    };
-    MenuComponent.prototype.selectSection = function (id) {
-        console.log('id clicked: ' + id);
+        this.showMenu = !this.showMenu;
+        console.log("showMenu");
     };
     return MenuComponent;
 }());
@@ -27,7 +26,7 @@ __decorate([
 MenuComponent = __decorate([
     core_1.Component({
         selector: 'main-menu',
-        template: "\n    <a (click)=\"toggleMenu()\">\n      <img src='Jesse_logo_80x.png'>\n    </a>\n    <!--\n    <ul>\n      <li *ngFor=\"let section of sections\">\n        <a (click)=\"selectSection(section.id)\" >{{ section.name }}</a>\n      </li>\n    </ul>-->\n  \n\n  ",
+        template: "\n    <a (click)=\"toggleMenu()\">\n      <img src='Jesse_logo_80x.png'>\n    </a>\n\n    <nav *ngIf=\"showMenu == true\">\n      <a routerLink=\"/work\" routerLinkActive=\"active\">Work</a>\n      <a routerLink=\"/about\" routerLinkActive=\"active\">About</a>\n      <a routerLink=\"/skills\" routerLinkActive=\"active\">Skills</a>\n      <a routerLink=\"/experience\" routerLinkActive=\"active\">Experience</a>\n    </nav>\n\n  ",
     })
 ], MenuComponent);
 exports.MenuComponent = MenuComponent;

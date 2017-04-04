@@ -9,20 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var router_1 = require("@angular/router");
+require("rxjs/add/operator/switchMap");
 var PageTitleComponent = (function () {
-    function PageTitleComponent() {
+    function PageTitleComponent(route, router) {
+        this.route = route;
+        this.router = router;
     }
+    PageTitleComponent.prototype.ngOnInit = function () {
+        this.title = this.route.snapshot.data['title'];
+    };
     return PageTitleComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Object)
-], PageTitleComponent.prototype, "section", void 0);
 PageTitleComponent = __decorate([
     core_1.Component({
         selector: 'page-title',
-        template: "<h1>{{section.name}}</h1>",
-    })
+        template: "<h1>{{title}}</h1>",
+    }),
+    __metadata("design:paramtypes", [router_1.ActivatedRoute,
+        router_1.Router])
 ], PageTitleComponent);
 exports.PageTitleComponent = PageTitleComponent;
 //# sourceMappingURL=pageTitle.component.js.map

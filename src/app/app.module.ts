@@ -9,6 +9,7 @@ import { ContentComponent }  from './content.component';
 import { PageTitleComponent }  from './pageTitle.component';
 
 @NgModule({
+  /* import modules, order matters */
   imports: [
     BrowserModule
     AppRoutingModule

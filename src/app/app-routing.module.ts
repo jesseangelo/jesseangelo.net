@@ -1,12 +1,12 @@
 import { NgModule }              from '@angular/core';
 import { RouterModule, Routes }  from '@angular/router';
-import { TestComponent } from './test.component';
+import { ContentComponent } from './content.component';
 
 const appRoutes: Routes = [
-  { path: 'work', component: TestComponent, data: { title: 'Work' } },
-  { path: 'skills', component: TestComponent, data: { title: 'Skills' } },
-  { path: 'experience', component: TestComponent, data: { title: 'Experience' } },
-  { path: 'about', component: TestComponent, data: { title: 'About' } }
+  { path: 'work', component: ContentComponent, data: { title: 'Work' } },
+  { path: 'skills', component: ContentComponent, data: { title: 'Skills' } },
+  { path: 'experience', component: ContentComponent, data: { title: 'Experience' } },
+  { path: 'about', component: ContentComponent, data: { title: 'About' } }
 ];
 
 @NgModule({
@@ -14,7 +14,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [
-    TestComponent
+
   ],
   exports: [
     RouterModule

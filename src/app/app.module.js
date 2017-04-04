@@ -19,6 +19,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
+        /* import modules, order matters */
         imports: [
             platform_browser_1.BrowserModule,
             app_routing_module_1.AppRoutingModule

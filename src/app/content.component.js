@@ -21,7 +21,7 @@ __decorate([
 ContentComponent = __decorate([
     core_1.Component({
         selector: 'content',
-        template: "<page-title [section]=section></page-title>\n  This is content",
+        template: "<page-title></page-title>\n  This is content",
     })
 ], ContentComponent);
 exports.ContentComponent = ContentComponent;

@@ -6,23 +6,22 @@ import { Component, Input } from '@angular/core';
     <a (click)="toggleMenu()">
       <img src='Jesse_logo_80x.png'>
     </a>
-    <!--
-    <ul>
-      <li *ngFor="let section of sections">
-        <a (click)="selectSection(section.id)" >{{ section.name }}</a>
-      </li>
-    </ul>-->
-  
+
+    <nav *ngIf="showMenu == true">
+      <a routerLink="/work" routerLinkActive="active">Work</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+      <a routerLink="/skills" routerLinkActive="active">Skills</a>
+      <a routerLink="/experience" routerLinkActive="active">Experience</a>
+    </nav>
 
   `,
 })
 export class MenuComponent {
-  toggleMenu() {
-    console.log('clicked');
-  }
+  showMenu: boolean = true;
 
-  selectSection(id) {
-    console.log('id clicked: ' + id);
+  toggleMenu() {
+    this.showMenu = !this.showMenu;
+    console.log("showMenu")
   }
 
   @Input() sections

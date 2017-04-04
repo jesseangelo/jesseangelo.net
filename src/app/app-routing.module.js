@@ -7,12 +7,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var test_component_1 = require("./test.component");
+var content_component_1 = require("./content.component");
 var appRoutes = [
-    { path: 'work', component: test_component_1.TestComponent, data: { title: 'Work' } },
-    { path: 'skills', component: test_component_1.TestComponent, data: { title: 'Skills' } },
-    { path: 'experience', component: test_component_1.TestComponent, data: { title: 'Experience' } },
-    { path: 'about', component: test_component_1.TestComponent, data: { title: 'About' } }
+    { path: 'work', component: content_component_1.ContentComponent, data: { title: 'Work' } },
+    { path: 'skills', component: content_component_1.ContentComponent, data: { title: 'Skills' } },
+    { path: 'experience', component: content_component_1.ContentComponent, data: { title: 'Experience' } },
+    { path: 'about', component: content_component_1.ContentComponent, data: { title: 'About' } }
 ];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
@@ -24,9 +24,7 @@ AppRoutingModule = __decorate([
         imports: [
             router_1.RouterModule.forRoot(appRoutes)
         ],
-        declarations: [
-            test_component_1.TestComponent
-        ],
+        declarations: [],
         exports: [
             router_1.RouterModule
         ]
