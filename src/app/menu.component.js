@@ -11,11 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require("@angular/core");
 var MenuComponent = (function () {
     function MenuComponent() {
-        this.showMenu = true;
+        this.showMenu = false;
     }
     MenuComponent.prototype.toggleMenu = function () {
         this.showMenu = !this.showMenu;
-        console.log("showMenu");
     };
     return MenuComponent;
 }());

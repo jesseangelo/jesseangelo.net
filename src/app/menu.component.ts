@@ -17,11 +17,10 @@ import { Component, Input } from '@angular/core';
   `,
 })
 export class MenuComponent {
-  showMenu: boolean = true;
+  showMenu: boolean = false;
 
   toggleMenu() {
     this.showMenu = !this.showMenu;
-    console.log("showMenu")
   }
 
   @Input() sections
